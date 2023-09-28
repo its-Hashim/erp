@@ -74,7 +74,7 @@ export const action = async ({request, params})=>{
 
   console.log(obj);
   console.log(request.method);
-  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/catagory/add', {
+  const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+'/catagory/add', {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'

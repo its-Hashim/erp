@@ -58,7 +58,7 @@ function CheckoutForSales() {
   const [paymentError, setPaymentError] = useState("");
   
 
-  const hostName= http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"";
+  const hostName= 'http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"";
   
   
   useEffect(() => {
@@ -195,7 +195,7 @@ function CheckoutForSales() {
     }
     const makeSale = ()=>
     {
-      fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/MAKE_SALE", {
+      fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/MAKE_SALE", {
       
         // Adding method type
         method: "POST",

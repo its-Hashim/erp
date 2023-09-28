@@ -53,7 +53,7 @@ function Clients() {
 
   useEffect(()=>{
     const getAllClientsList = ()=>{
-      fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/getAllClientsList')
+      fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+'/getAllClientsList')
       .then(res=>res.json())
       .then((data =>{
         // console.log(data);
@@ -67,7 +67,7 @@ function Clients() {
   
   useEffect(() => {
     const fetchData = async()=>{
-      const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getClientsList?"+new URLSearchParams ({pageNo}));
+      const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/getClientsList?"+new URLSearchParams ({pageNo}));
       const data = await res.json();
       // console.log(data.clientsList);
       dispatch({type:'UPDATE_CLIENTS_LIST', value: {clientsList:data.clientsList, noOfPages: data.noOfPages}});

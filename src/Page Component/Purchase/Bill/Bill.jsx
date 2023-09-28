@@ -15,7 +15,7 @@ function Bill(props) {
   // pdf.autoPrint();
   useEffect(() => {
     const fetchData = async ()=>{
-      const res =await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getBillDetails?"+new URLSearchParams ({id:(id)}));
+      const res =await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/getBillDetails?"+new URLSearchParams ({id:(id)}));
       const data = await res.json();
       const pdf = getPDF(data);
       setSaleId(data.saleDetails.sale_id);
@@ -42,7 +42,7 @@ function Bill(props) {
 
   const moveToCart = ()=>{
     const moveItemsToCart = async ()=>{
-      const res =await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/fillCartFromBill?"+new URLSearchParams ({cartNo, saleId}));
+      const res =await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/fillCartFromBill?"+new URLSearchParams ({cartNo, saleId}));
       const data = await res.json();
       if (data.success) {
         navigate('/');

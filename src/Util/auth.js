@@ -3,7 +3,7 @@ import {redirect} from 'react-router-dom'
 
 export const rootLoader = async ({request, params})=>{
   // console.log('------------------FROM THE ROOT LOADER-------------------------');
-  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/loginReact', {
+  const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+'/loginReact', {
     credentials: "include",
   });
   const ret = await res.json();
@@ -46,7 +46,7 @@ export async function tokenLoader() {
   } else {
 
     let userData;
-    await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getUserData", {
+    await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/getUserData", {
       headers: {
         'Authorization': 'Bearer ' + token
       },

@@ -49,7 +49,7 @@ const DistributorsHistory = ()=>{
 
   useEffect(() => {
     const fetchData = async()=>{
-      const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getAllDistributorsHistory?"+new URLSearchParams ({pageNo,id}));
+      const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/getAllDistributorsHistory?"+new URLSearchParams ({pageNo,id}));
       const data = await res.json();
       // console.log(data.details);
       dispatch({type:'UPDATE_LIST', value: {list:data.list, noOfPages: data.noOfPages,name: data.name, details:data.details}});
@@ -90,6 +90,6 @@ const DistributorsHistory = ()=>{
 export default DistributorsHistory;
 
 export const loader = async({params})=>{
-  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getDistributorsDetails?"+new URLSearchParams ({id:params.id}));
+  const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/getDistributorsDetails?"+new URLSearchParams ({id:params.id}));
   return res;
 }

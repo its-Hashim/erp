@@ -57,7 +57,7 @@ function Categories() {
 }
 
 export const loader = async ()=>{
-  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/getCategoryList');
+  const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+'/getCategoryList');
   return res;
 }
 

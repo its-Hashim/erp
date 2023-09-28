@@ -45,7 +45,7 @@ function NavBar(props) {
   }
   // const logoutHandler = async ()=>{
   //   // console.log("Handling logout")
-  //   let res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/logoutReact2",{
+  //   let res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/logoutReact2",{
   //     method:'post',
   //     credentials: 'include'
   //   });

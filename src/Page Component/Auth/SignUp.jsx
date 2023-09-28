@@ -82,7 +82,7 @@ export const action = async ({ request, params }) => {
   };
   console.log(obj);
   console.log(request.method);
-  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/signUpReact", {
+  const res = await fetch('http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com'+"/signUpReact", {
     method: request.method,
     headers: {
       "Content-Type": "application/json",

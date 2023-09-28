@@ -22,7 +22,7 @@ export default function Cart() {
   // const searchRef = useRef();
 
   let url =
-    process.env.REACT_APP_NODE_ENV+"/getProductsReact?" +
+    http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getProductsReact?" +
     new URLSearchParams({
       cart_no: 1,
     });
@@ -85,7 +85,7 @@ export default function Cart() {
   const taxCheckHandler = (event)=>{
     let summ = {...summery};
     summ.tax = !summery.tax
-    let url = process.env.REACT_APP_NODE_ENV+'/upTax/';
+    let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/upTax/';
     axios.post(url,{cart_no: cart_no, tax: summ.tax})
       .then((res) => {
         if (!res.data) {
@@ -103,7 +103,7 @@ export default function Cart() {
   }
 
   const shippingBlurHand = ()=>{
-    let url = process.env.REACT_APP_NODE_ENV+'/upShip/';
+    let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/upShip/';
     axios.post(url,{cart_no: cart_no, shipping: summery.shipping})
       .then((res) => {})
       .catch((res) => {alert("could not update shipping")});
@@ -115,7 +115,7 @@ export default function Cart() {
     dispatch(updateSummery(summ));
   }
   const summDiscBlurHand= (event)=>{
-    let url = process.env.REACT_APP_NODE_ENV+'/upSummeryDisc/';
+    let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/upSummeryDisc/';
     axios.post(url,{cart_no: cart_no, discount: summery.discount})
       .then((res) => {})
       .catch((res) => {alert("could not update discount")});
@@ -123,7 +123,7 @@ export default function Cart() {
 
   const addToCart = () => {
     let product_id = search.split(':')[0];
-    let url = process.env.REACT_APP_NODE_ENV+'/addProductIntoCart/'+ product_id;
+    let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/addProductIntoCart/'+ product_id;
     axios.get(url).then((res) => {
       if (res.length === 0) {
         alert("product not found");
@@ -152,7 +152,7 @@ export default function Cart() {
   };
 
   const removeProductHandler = (e)=>{
-    let url = process.env.REACT_APP_NODE_ENV+'/removeProductFromCart/'+e.target.id;
+    let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/removeProductFromCart/'+e.target.id;
     axios.get(url).then((res) => {
       if(!res.data){
         alert("cannot delete item from cart");
@@ -181,7 +181,7 @@ export default function Cart() {
   const quanBlurHand = (event) =>{
     if(quantityChanged){
       let index = event.target.id.split(":")[1];
-      let url = process.env.REACT_APP_NODE_ENV+'/upQuan/'
+      let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/upQuan/'
       axios.post(url,{sl_no: cart[index].sl_no, quantity: cart[index].quantity})
       .then((res) => {})
       .catch((res) => {alert("could not update quantity")});
@@ -192,7 +192,7 @@ export default function Cart() {
   const discBlurHand = (event) =>{
     if(discChanged){
       let index = event.target.id.split(":")[2];
-      let url = process.env.REACT_APP_NODE_ENV+'/upDisc/'
+      let url = http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/upDisc/'
       axios.post(url,{sl_no: cart[index].sl_no, discount: cart[index].discount})
       .then((res) => {})
       .catch((res) => {alert("could not update discount")});

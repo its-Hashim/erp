@@ -57,7 +57,7 @@ export default function Products() {
   const [{pageNo,noOfPages,productList, categoryList, brandList, cat, brand, stock, active, stk, amt}, dispatch] = useReducer(reducer, initialState);
 
   useEffect(()=>{
-    fetch(process.env.REACT_APP_NODE_ENV+"/getCategoryBrand")
+    fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getCategoryBrand")
     .then(res=>res.json())
     .then((data)=>{
         dispatch({type:"UPDATE_BRAND_AND_CATEGORY_LIST", brandList:data.brand, categoryList:data.cat})
@@ -65,7 +65,7 @@ export default function Products() {
   },[]);
 
   useEffect(()=>{
-    fetch(process.env.REACT_APP_NODE_ENV+"/getProductList?"+new URLSearchParams({pageNo,cat, brand, stock, active}))
+    fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getProductList?"+new URLSearchParams({pageNo,cat, brand, stock, active}))
     .then(res=>res.json())
     .then((data)=>{
         // console.log("**************");
@@ -84,7 +84,7 @@ export default function Products() {
   const filterFormSubmitHandler = (e)=>{
     e.preventDefault();
     // console.log(cat, brand, stock, active);
-    // fetch(process.env.REACT_APP_NODE_ENV+"/getProductList?"+new URLSearchParams({pageNo, cat, brand, stock, active}))
+    // fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getProductList?"+new URLSearchParams({pageNo, cat, brand, stock, active}))
     // .then(res=>res.json())
     // .then((data)=>{
       //   console.log("______________");
@@ -173,7 +173,7 @@ export const action = async ({request, params})=>{
   }
   console.log(obj);
   console.log(request.method);
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+'/createNewProduct', {
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/createNewProduct', {
     method: request.method,
     headers: {
       'Content-Type': 'application/json'

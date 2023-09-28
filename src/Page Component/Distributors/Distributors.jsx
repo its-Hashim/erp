@@ -55,7 +55,7 @@ function Distributors() {
 
   useEffect(()=>{
     const getAllClientsList = ()=>{
-      fetch(process.env.REACT_APP_NODE_ENV+'/getAllDistributorsList')
+      fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/getAllDistributorsList')
       .then(res=>res.json())
       .then((data =>{
         // console.log(data);
@@ -69,7 +69,7 @@ function Distributors() {
   
   useEffect(() => {
     const fetchData = async()=>{
-      const res = await fetch(process.env.REACT_APP_NODE_ENV+"/getDistributorsList?"+new URLSearchParams ({pageNo}));
+      const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getDistributorsList?"+new URLSearchParams ({pageNo}));
       const data = await res.json();
       // console.log(data);
       dispatch({type:'UPDATE_DISTRIBUTORS_LIST', value: {distributorsList:data.distributorsList, noOfPages: data.noOfPages}});

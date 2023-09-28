@@ -28,7 +28,7 @@ export const action = async ({ request, params }) => {
   }
   console.log(obj);
   console.log(request.method);
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+'/clients/addClient', {
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/clients/addClient', {
     method: request.method,
     headers: {
       'Content-Type': 'application/json'

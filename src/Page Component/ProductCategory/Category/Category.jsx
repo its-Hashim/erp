@@ -10,7 +10,7 @@ export default function Category() {
   let name=category.name.replace(/_/g, " " );
   name=name.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   const del = async()=>{
-    const res = await fetch(process.env.REACT_APP_NODE_ENV+'/deleteCatagory/'+category.name);
+    const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/deleteCatagory/'+category.name);
     const ret = await res.json();
     console.log(ret);
     if (ret.done==true || ret.done==='true') {
@@ -80,6 +80,6 @@ export default function Category() {
 }
 
 export const loader = async ({request, params})=>{
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+'/editCatagory/'+params.name);
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/editCatagory/'+params.name);
   return res;
 }

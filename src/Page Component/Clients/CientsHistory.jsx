@@ -49,7 +49,7 @@ const ClientHistory = ()=>{
 
   useEffect(() => {
     const fetchData = async()=>{
-      const res = await fetch(process.env.REACT_APP_NODE_ENV+"/getAllClientsHistory?"+new URLSearchParams ({pageNo,id}));
+      const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getAllClientsHistory?"+new URLSearchParams ({pageNo,id}));
       const data = await res.json();
       // console.log(data.details);
       dispatch({type:'UPDATE_LIST', value: {list:data.list, noOfPages: data.noOfPages,name: data.name, details:data.details}});
@@ -90,6 +90,6 @@ const ClientHistory = ()=>{
 export default ClientHistory;
 
 export const loader = async({params})=>{
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+"/getClientsDetails?"+new URLSearchParams ({id:params.id}));
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getClientsDetails?"+new URLSearchParams ({id:params.id}));
   return res;
 }

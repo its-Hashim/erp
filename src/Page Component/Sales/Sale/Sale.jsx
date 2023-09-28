@@ -43,7 +43,7 @@ function Sale() {
 
   useEffect(() => {
     const fetchData = async()=>{
-      const res = await fetch(process.env.REACT_APP_NODE_ENV+"/getSaleList?"+new URLSearchParams ({pageNo}));
+      const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getSaleList?"+new URLSearchParams ({pageNo}));
       const data = await res.json();
       dispatch({type:'UPDATE_SALES_LIST', value: {salesList:data.salesList, noOfPages: data.noOfPages}});
     }

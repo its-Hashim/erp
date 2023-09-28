@@ -6,7 +6,7 @@ export default function AddProducts() {
   const [pageDetails, setPageDetails] = useState({brands:[],category:[],units:[]})
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_NODE_ENV+"/addProductPageDetails")
+    fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/addProductPageDetails")
     .then(res=>res.json())
     .then((data)=>{
         // console.log(data);

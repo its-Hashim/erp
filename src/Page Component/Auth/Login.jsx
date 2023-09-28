@@ -58,7 +58,7 @@ function Login() {
 
 
 export const loader = async ()=>{
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+'/loginReact', {
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/loginReact', {
     credentials: "include",
   });
   const ret = await res.json();
@@ -80,7 +80,7 @@ export const action = async ({ request, params }) => {
   };
   // console.log(obj);
   // console.log(request.method);
-  const res = await fetch(process.env.REACT_APP_NODE_ENV+"/loginReact", {
+  const res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/loginReact", {
     method: request.method,
     headers: {
       "Content-Type": "application/json",

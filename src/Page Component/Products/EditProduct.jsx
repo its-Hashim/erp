@@ -26,7 +26,7 @@ export default function EditProduct() {
 
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_NODE_ENV+"/getProductDetails?"+new URLSearchParams({id}))
+    fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+"/getProductDetails?"+new URLSearchParams({id}))
     .then(res=>res.json())
     .then((data)=>{
       console.log(data);
@@ -233,7 +233,7 @@ export const action = async ({request, params})=>{
   specFields.forEach((d)=>{
     obj[d]=data.get(d);
   })
-  let res = await fetch(process.env.REACT_APP_NODE_ENV+'/editProduct', {
+  let res = await fetch(http://nodejs-erm-express-rds.eba-gvxxjsfd.us-west-2.elasticbeanstalk.com+'/editProduct', {
     method: request.method,
     headers: {
       'Content-Type': 'application/json'
